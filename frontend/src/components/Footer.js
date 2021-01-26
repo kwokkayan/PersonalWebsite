@@ -1,5 +1,5 @@
 import { Component } from "react";
-const { GetClientIP } = require("../api/ClientIP");
+const { GetClientIP } = require("../services/ClientIP");
 
 class Footer extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <div className="IPAddress">
+        <div className="ipaddress">
           {this.state.clientIP ? (
             <h3>Your Current IP Address is {this.state.clientIP}</h3>
           ) : (

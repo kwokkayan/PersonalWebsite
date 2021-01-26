@@ -1,13 +1,128 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Header Styling */
+header {
+  min-height: 8vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #5d4954;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header .logo {
+  color: rgb(226, 226, 226);
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+header ul {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  color: rgb(226, 226, 226);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+header .burger {
+  display: none;
+  cursor: pointer;
+}
+
+header .burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: rgb(226, 226, 226);
+
+  transition: 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1280px) {
+  header ul {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header ul {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    overflow-x: hidden;
+  }
+
+  header ul {
+    position: absolute;
+    top: 8vh;
+    right: 0px;
+    width: 35 %;
+    height: 92vh;
+    background-color: #5d4954;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  header ul li {
+    opacity: 0;
+  }
+
+  header .burger {
+    display: block;
+  }
+}
+
+/* Animation */
+.burger.active .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.active .line2 {
+  opacity: 0;
+}
+
+.burger.active .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+header ul.active {
+  transform: translateX(0%);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
