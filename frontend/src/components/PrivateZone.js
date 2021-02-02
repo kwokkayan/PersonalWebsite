@@ -1,5 +1,7 @@
+import "../styles/privateZone.css";
+
 const PrivateZone = () => {
-  return <div className="PrivateZone">Private Zone, Restricted Area!</div>;
+  return <div className="private-zone">!</div>;
 };
 
 export default PrivateZone;

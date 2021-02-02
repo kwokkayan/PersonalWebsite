@@ -2,10 +2,7 @@
 const axios = require("axios").default;
 
 function GetClientIP() {
-  axios
-    .get("/api/ip")
-    .then((res) => res)
-    .catch((err) => console.log(err));
+  return axios.get("http://localhost:3000/api/ip");
 }
 
 module.exports = {

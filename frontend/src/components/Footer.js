@@ -1,5 +1,7 @@
 import { Component } from "react";
-const { GetClientIP } = require("../services/ClientIP");
+import "../styles/footer.css";
+import GitHubLogo from "../images/GitHub-Mark/PNG/GitHub-Mark-Light-32px.png";
+const { GetClientIP } = require("../services/GetClientIP");
 
 class Footer extends Component {
   constructor(props) {
@@ -7,24 +9,33 @@ class Footer extends Component {
     this.state = {
       clientIP: "",
     };
-    this.setState({
-      clientIP: GetClientIP(),
-    });
+  }
+
+  componentDidMount() {
+    GetClientIP()
+      .then((res) => this.setState({ clientIP: res.data }))
+      .catch((err) => console.log(err));
   }
 
   render() {
     return (
       <footer>
-        <div className="ipaddress">
+        <div className="ip-address">
           {this.state.clientIP ? (
-            <h3>Your Current IP Address is {this.state.clientIP}</h3>
+            <div>Your Current IP Address is {this.state.clientIP}</div>
           ) : (
-            <h3>Waiting</h3>
+            <div>Unknown Client IP</div>
           )}
         </div>
         <div className="credit">
-          <div>Github</div>
-          <h3>Designed & Created By Terry Leung</h3>
+          <a
+            href="https://github.com/terrylcc"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={GitHubLogo} alt="To My GitHub Profile"></img>
+          </a>
+          <div>Designed & Created By Terry Leung</div>
         </div>
       </footer>
     );

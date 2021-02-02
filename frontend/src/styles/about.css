@@ -1,0 +1,114 @@
+.about {
+  background-color: var(--light-black-1);
+  min-height: 80vh;
+
+  padding: 0 10%;
+}
+
+.about .intro {
+  width: 70%;
+  margin: 0;
+  padding: 10vh 0 5vh 0;
+}
+
+.about .intro .title {
+  padding: 0 0 3vh 0;
+  text-align: left;
+
+  color: var(--grey-white);
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.about .intro p {
+  text-align: justify;
+
+  color: var(--grey-white);
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 1px;
+}
+
+.about .interests {
+  position: relative;
+  left: 20%;
+
+  width: 80%;
+  margin: 0;
+  padding: 5vh 0;
+}
+
+.about .interests .title {
+  padding: 0 0 2vh 0;
+  text-align: left;
+
+  color: var(--grey-white);
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.about .interests .subtitle {
+  padding: 0 0 2vh 0;
+  text-align: left;
+
+  color: var(--grey-white);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.about .interests p {
+  padding: 2vh 0;
+  text-align: justify;
+
+  color: var(--grey-white);
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 1px;
+}
+
+.about .interests table {
+  margin: 5vh 0;
+  padding: 5vh 2vh;
+  border: 6px dotted var(--grey-white);
+}
+
+.about .interests table tr th,
+td {
+  padding: 1vh;
+
+  color: var(--grey-white);
+  font-size: 16px;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+.about .guide {
+  padding: 2vh 0 10vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about .guide div {
+  color: var(--grey-white);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.about .guide a {
+  color: var(--grey-white);
+  margin: 3vh 0 0;
+  padding: 2vh;
+  font-size: 28px;
+  letter-spacing: 2px;
+
+  border: 4px solid var(--grey-white);
+  border-radius: 5px;
+  text-decoration: none;
+}

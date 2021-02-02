@@ -1,0 +1,96 @@
+.home {
+  background-color: var(--dark-blue);
+  min-height: 80vh;
+}
+
+.home .page-one {
+  position: relative;
+  min-height: 90vh;
+  background-size: cover;
+
+  border-radius: 0 0 12% 8%;
+}
+
+.home .page-one .quote {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.home .page-one .quote div {
+  padding: 5px 0;
+  color: var(--grey-white);
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 8px;
+}
+
+.home .page-two {
+  position: relative;
+  min-height: 90vh;
+  background-color: var(--dark-blue);
+}
+
+.home .page-two form {
+  width: 100%;
+  height: 100%;
+  margin: 0% auto;
+  padding: 5vh 0;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home .page-two form .title {
+  width: 50%;
+  margin: 8vh 0vh 4vh 0vh;
+  text-align: center;
+  text-shadow: 5px 5px 3px var(--light-black-0);
+  text-transform: uppercase;
+
+  color: var(--grey-white);
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.home .page-two form label {
+  width: 50%;
+  margin: 1.5vh 0;
+  padding: 1.5vh 0;
+
+  color: var(--grey-white);
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.home .page-two form input,
+select,
+option {
+  width: 50%;
+  margin: 1vh;
+  padding: 0vh;
+
+  color: var(--grey-white);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  border-width: 0px 0px 3px 0px;
+  background-color: var(--dark-blue);
+}
+
+.home .page-two form button {
+  margin: 5vh 0;
+  padding: 3vh 5vw;
+
+  color: var(--grey-white);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 3px;
+
+  box-shadow: 3px 3px 3px var(--light-black-0);
+  background-color: var(--dark-blue);
+}

@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Footer Styling */
+footer {
+  position: absolute;
+  bottom: -10vh;
+  width: 100%;
+  padding: 0% 8%;
+  min-height: 10vh;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--dark-violet);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .ip-address {
+  color: var(--grey-white);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+footer .credit {
+  display: flex;
+  align-items: center;
+}
+
+footer .credit img {
+  position: relative;
+  right: 8px;
+}
+
+footer .credit div {
+  color: var(--grey-white);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

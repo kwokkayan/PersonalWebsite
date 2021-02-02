@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const usersRoutes = require("./routes/users");
 const billsRoutes = require("./routes/bills");
@@ -42,6 +43,7 @@ db.on("error", (err) => {
 });
 
 // Using middleware
+app.use(cors());
 app.use(express.json());
 
 // Getting client IP
